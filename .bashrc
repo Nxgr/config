@@ -33,6 +33,9 @@ shopt -s cmdhist
 HISTCONTROL=ignoreboth
 export HISTIGNORE="&:ls:[bf]g:exit"
 
+# complete sudo and man-pages
+complete -cf sudo man
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -47,6 +50,11 @@ alias ld="ls -CFlh"
 alias tarx="tar xvf"
 
 alias diskspace="du -Sh | sort -n -r |more"
+
+alias brc='vim ~/.bashrc'
+alias sbrc='source ~/.bashrc'
+
+function cl(){ cd "$@" && la; }
 
 myinfo () {
   printf "CPU: "
