@@ -36,7 +36,7 @@
 "    -> Spell checking
 "    -> Misc
 "    -> Helper functions
-"
+"    -> Pathogen
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -394,3 +394,8 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pathogen
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+execute pathogen#infect()
