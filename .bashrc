@@ -22,9 +22,9 @@ LIGHTYELLOW='\e[0;33m'
 WHITE='\e[1;37m'
 NC='\e[0m' # No Color
 
+export TERM=xterm-256color
 
 ###STUFF###
-
 
 export HISTFILESIZE=20000
 export HISTSIZE=10000
@@ -33,6 +33,7 @@ shopt -s cmdhist
 HISTCONTROL=ignoreboth
 export HISTIGNORE="&:ls:[bf]g:exit"
 
+eval `dircolors /root/.dircolors`
 # complete sudo and man-pages
 complete -cf sudo man
 
@@ -53,6 +54,8 @@ alias diskspace="du -Sh | sort -n -r |more"
 
 alias brc='vim ~/.bashrc'
 alias sbrc='source ~/.bashrc'
+
+alias tmux='TERMINFO=/usr/share/terminfo/x/xterm-16color TERM=xterm-16color tmux -2'
 
 function cl(){ cd "$@" && la; }
 
