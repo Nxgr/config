@@ -1,5 +1,9 @@
 ###USERDATA (AKA X0STUFF):
 
+if [ -z "$PS1" ]; then
+    return
+fi
+
 
 ###COLORS###
 
